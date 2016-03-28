@@ -9,7 +9,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-![Alt text](https://giphy.com/gifs/8GRbPIA3xze0M "Flick Manager Gif")
+![Alt text](<iframe src="//giphy.com/embed/8GRbPIA3xze0M" width="480" height="853" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/8GRbPIA3xze0M">via GIPHY</a></p> "Flick Manager Gif")
 
 ## Requirements
 iOS 8 and Higher
