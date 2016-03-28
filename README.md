@@ -9,7 +9,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-![Alt text](http://gph.is/1qbFKwK "Flick Manager Gif")
+![Alt text](<div style="max-width: 500px;" id="_giphy_8GRbPIA3xze0M"></div><script>var _giphy = _giphy || []; _giphy.push({id: "8GRbPIA3xze0M",w: 270, h: 480});var g = document.createElement("script"); g.type = "text/javascript"; g.async = true;g.src = ("https:" == document.location.protocol ? "https://" : "http://") + "giphy.com/static/js/widgets/embed.js";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(g, s);</script> "Flick Manager Gif")
 
 ## Requirements
 iOS 8 and Higher
