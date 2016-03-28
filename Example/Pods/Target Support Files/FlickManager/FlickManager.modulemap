@@ -1,0 +1,6 @@
+framework module FlickManager {
+  umbrella header "FlickManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,14 @@
+PODS:
+  - FlickManager (0.1.0)
+
+DEPENDENCIES:
+  - FlickManager (from `../`)
+
+EXTERNAL SOURCES:
+  FlickManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FlickManager: 8e96cc8e6bc89501c761863bd49c15d70b75ef63
+
+COCOAPODS: 0.39.0

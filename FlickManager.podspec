@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "FlickManager"
   s.version          = "0.1.0"
-  s.summary          = "A short description of FlickManager."
+  s.summary          = "A flick manager to add actions to PanGesture directions on popup and card views."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,10 +17,11 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
+FlickManager was created to replace button interactions on Popup or Card views and make it a little more interactive.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/FlickManager"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/charlesvinette/FlickManager"
+  s.screenshots     =  "http://i.giphy.com/8GRbPIA3xze0M.gif"
   s.license          = 'MIT'
   s.author           = { "Charles Vinette" => "vinettecharles@gmail.com" }
   s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/FlickManager.git", :tag => s.version.to_s }
