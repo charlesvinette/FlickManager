@@ -9,6 +9,8 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+![Alt text](https://giphy.com/gifs/8GRbPIA3xze0M "Flick Manager Gif")
+
 ## Requirements
 iOS 8 and Higher
 
