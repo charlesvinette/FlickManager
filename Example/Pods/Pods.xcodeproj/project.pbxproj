@@ -56,7 +56,7 @@
 		E4FF6E2F5E607035E54EFE92440D8D62 /* Pods-FlickManager_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FlickManager_Tests-dummy.m"; sourceTree = "<group>"; };
 		E71C187BA1C78237142E68024EF16035 /* FlickManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlickManager-prefix.pch"; sourceTree = "<group>"; };
 		ECA25FE4723B62DBB6B7E76036DE0C36 /* FlickManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlickManager-umbrella.h"; sourceTree = "<group>"; };
-		F7F2B2401CA9D76B002CD71C /* WKLNFlickManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKLNFlickManagerViewController.swift; sourceTree = "<group>"; };
+		F7F2B2401CA9D76B002CD71C /* WKLNFlickManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WKLNFlickManagerViewController.swift; path = ../../Example/Pods/WKLNFlickManagerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +89,7 @@
 		23A7DDC2A604D9664DA4A92C5C54F892 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F7F2B2401CA9D76B002CD71C /* WKLNFlickManagerViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -124,7 +125,6 @@
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				F7F2B2401CA9D76B002CD71C /* WKLNFlickManagerViewController.swift */,
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				46847ADF94EE83D8F65C5A60E61BA6C4 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
