@@ -7,7 +7,18 @@
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+```swift
+//Create the view you want to use the flick manager on
+  let vc = UIViewController()
+//Create the FlickManager with the previously created VC  
+  let vcWithFlickManager = FlickManager(vc)
+//You can then configure the Right and Left Button, and add their targets (.TouchUpInside is Mandatory), and add their //constraints
+  vcWithFlickManager.rightButton.setImage(bla bla bla)
+  vcWithFlickManager.rightButton.addTarget(bla bla bla, .TouchUpInside)
+  vcWithFlickManager.rightButtonSize = 100
+//Then, Display the vcWithFlickManager
+self.presentViewController(vcWithFlickManager)
+```
 
 ![](http://imgur.com/bVGTpda.gif)
 
