@@ -9,7 +9,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-+![](http://imgur.com/bVGTpda.gif)
+![](http://imgur.com/bVGTpda.gif)
 
 ## Requirements
 iOS 8 and Higher
