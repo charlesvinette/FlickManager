@@ -9,7 +9,8 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-![Alt text](http://imgur.com/bVGTpda "Flick Manager Gif")
+![Alt text](http://imgur.com/bVGTpda.gif "Flick Manager Gif")
++![](http://imgur.com/bVGTpda.gif)
 
 ## Requirements
 iOS 8 and Higher
