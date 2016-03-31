@@ -32,13 +32,15 @@ class FlickManager: UIViewController, UIGestureRecognizerDelegate {
 	var rightButton:UIButton!
 	var didDragToLeft = false
 	var didDragToRight = false
+	var viewToAddFlick: UIView!
 	
 	//MARK: Initialization
 	
-	init(view:UIView){
+	init(backgroundView:UIView, viewToAddFlick: UIView){
 		super.init(nibName: nil, bundle: nil)
-		self.view = view
-		self.createWithView(view)
+		self.view = backgroundView
+		self.viewToAddFlick = viewToAddFlick
+		self.createWithView(viewToAddFlick)
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -46,14 +48,6 @@ class FlickManager: UIViewController, UIGestureRecognizerDelegate {
 	}
 	
 	func createWithView(view:UIView){
-		let animator = UIDynamicAnimator(referenceView: self.view)
-		self.animator = animator
-		self.originalBounds = self.view.bounds
-		self.originalCenter = self.view.center
-		
-		let panGesture = UIPanGestureRecognizer()
-		panGesture.addTarget(self, action: "handleAttachmentGesture:")
-		self.view.addGestureRecognizer(panGesture)
 		
 		//Right and Left Button
 		
@@ -65,33 +59,46 @@ class FlickManager: UIViewController, UIGestureRecognizerDelegate {
 		let rightButton = UIButton()
 		self.rightButton = rightButton
 		self.view.addSubview(rightButton)
+		
+		//Adds the ViewToAddFlick
+		self.view.addSubview(view)
+		
+		let animator = UIDynamicAnimator(referenceView: self.view)
+		self.animator = animator
+		self.originalBounds = view.bounds
+		self.originalCenter = self.view.center
+		
+		let panGesture = UIPanGestureRecognizer()
+		panGesture.addTarget(self, action: #selector(FlickManager.handleAttachmentGesture))
+		self.view.addGestureRecognizer(panGesture)
+
 	}
 	
 	
 	func handleAttachmentGesture(panGesture: UIPanGestureRecognizer) {
 		let location = panGesture.locationInView(self.view)
-		let boxLocation = panGesture.locationInView(self.view)
+		let boxLocation = panGesture.locationInView(self.viewToAddFlick)
 		
-		let initialMidX = CGRectGetMidX(self.view.bounds)
+		let initialMidX = CGRectGetMidX(self.viewToAddFlick.bounds)
 		
 		if panGesture.state == .Began {
 			
 			self.animator.removeAllBehaviors()
-			let centerOffset = UIOffsetMake(boxLocation.x - CGRectGetMidX(self.view.bounds), boxLocation.y - CGRectGetMidY(self.view.bounds))
-			self.attachmentBehavior = UIAttachmentBehavior(item: self.view, offsetFromCenter: centerOffset, attachedToAnchor: location)
+			let centerOffset = UIOffsetMake(boxLocation.x - CGRectGetMidX(self.viewToAddFlick.bounds), boxLocation.y - CGRectGetMidY(self.viewToAddFlick.bounds))
+			self.attachmentBehavior = UIAttachmentBehavior(item: self.viewToAddFlick, offsetFromCenter: centerOffset, attachedToAnchor: location)
 			self.animator.addBehavior(attachmentBehavior)
 		}
 		
 		if panGesture.state == .Changed{
 			
-			if self.view.frame.midX > initialMidX + 150{
+			if self.viewToAddFlick.frame.midX > initialMidX + 150{
 				//Right
 				self.leftButton.alpha = (self.view.frame.midX - (initialMidX + 150)) * 0.03
 				if self.leftButton.alpha >= 1{
 					self.leftButton.alpha = 1
 					self.didDragToRight = true
 				}
-			}else if self.view.frame.midX < initialMidX - 150{
+			}else if self.viewToAddFlick.frame.midX < initialMidX - 150{
 				//Left
 				self.rightButton.alpha = ((initialMidX - 150) - self.view.frame.midX) * 0.03
 				if self.rightButton.alpha >= 1{
@@ -103,11 +110,11 @@ class FlickManager: UIViewController, UIGestureRecognizerDelegate {
 		
 		if panGesture.state == .Ended {
 			
-			if self.view.frame.midX > initialMidX + 100{
+			if self.viewToAddFlick.frame.midX > initialMidX + 100{
 				//Right
 				popupMovedVertically = false
 				
-			}else if self.view.frame.midX < initialMidX - 100{
+			}else if self.viewToAddFlick.frame.midX < initialMidX - 100{
 				//Left
 				popupMovedVertically = false
 			}else{
